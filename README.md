@@ -84,16 +84,15 @@ Model checkpoint weights are available upon request for research and validation 
 
 ## Team & Mentorship
 Team Madras Intelligence :
-
-Abhinav
-Vishal
-Mahir Ali
-Bhavana
+* Abhinav
+* Vishal
+* Mahir Ali
+* Bhavana
 
 ### Mentorship & Special Thanks
 We express our gratitude to our mentors from the Indian Space Research Organisation (ISRO) for their guidance throughout the competition:
 
-Uday Kumar (ISRO Scientist)
-Pruthvi Raj (ISRO Scientist)
-Mayukh Mukherjee (ISRO Scientist)
+* Uday Kumar (ISRO Scientist)
+* Pruthvi Raj (ISRO Scientist)
+* Mayukh Mukherjee (ISRO Scientist)
 ---
