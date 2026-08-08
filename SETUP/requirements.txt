@@ -1,0 +1,29 @@
+# --- Do NOT add torch, torchvision, torchaudio, causal-conv1d, or mamba-ssm here. ---
+# install_mamba() in train_pathmamba_v2.py installs those itself, in a specific
+# order, with --no-build-isolation / --no-deps. Letting pip resolve them via this
+# file is exactly what caused repeated cu126/cu130/cu121 version drift and the
+# causal-conv1d build failures this session. Keep them script-managed, not
+# requirements-managed. Correct known-good combo (confirmed working):
+#   torch==2.4.0+cu121 (index: https://download.pytorch.org/whl/cu121)
+#   causal-conv1d==1.4.0  (--no-build-isolation --no-deps)
+#   mamba-ssm==2.2.2      (--no-build-isolation --no-deps)
+
+# --- Training script (train_pathmamba_v2.py) ---
+networkx>=3.0,<4.0
+numpy>=1.24,<2.0
+scipy>=1.10,<1.14
+Pillow>=10.0,<11.0
+timm>=0.9,<1.1
+matplotlib>=3.7,<3.10
+scikit-image>=0.21,<0.23
+kaggle>=1.6,<1.7
+
+# --- route_resilience package (pipeline: skeletonization, healing, centrality, etc.) ---
+# networkx, numpy, scipy already covered above -- same versions serve both.
+
+# --- UI (app.py) + tile mosaicking (mosaic_tiles.py) ---
+streamlit>=1.35,<2.0
+plotly>=5.18,<6.0
+rasterio>=1.3,<1.4
+folium>=0.15,<0.16
+streamlit-folium>=0.18,<0.19
