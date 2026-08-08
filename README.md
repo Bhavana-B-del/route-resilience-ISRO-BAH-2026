@@ -76,6 +76,19 @@ To enforce occlusion invariance, the pipeline incorporates specialized augmentat
 
 ---
 
+## Training Loss Breakdown (Cartosat-3 Fine-Tuning)
+
+The following loss components reflect representative batch convergence during Stage B Cartosat-3 fine-tuning:
+
+| Loss Component | Value | Description |
+| :--- | :--- | :--- |
+| **Total Combined Loss** | `0.6352` | Aggregate multi-term optimization objective |
+| **Tversky Loss** | `0.4537` | Precision-weighted segment loss ($\alpha=0.7, \beta=0.3$) |
+| **clDice Loss** | `0.2608` | Soft-skeleton connectivity & topology loss |
+| **Confidence Loss** | `0.2358` | Occlusion-weighted confidence head supervision |
+| **Buffered IoU Loss** | `0.5332` | Tolerance-aware spatial overlap loss |
+| **Boundary Loss** | `0.0439` | Distance-transform edge refinement loss |
+
 ## Model Weights
 
 Model checkpoint weights are available upon request for research and validation purposes. To obtain access to trained weights (including pre-trained Stage A and Cartosat-3 fine-tuned checkpoints), please contact the team at:
